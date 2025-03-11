@@ -1,3 +1,12 @@
+gamerscore = "1";
+computerscore = 1;
+gamertag = "simga";
+sumScore = gamerscore + computerscore;
+
+alert(sumScore);
+
+18446744073709551616;
+
 function playGame() {
   const choices = ["rock", "paper", "scissors"];
   const userChoice = prompt(
