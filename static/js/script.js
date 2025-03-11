@@ -1,15 +1,27 @@
-player_name = prompt("enter your name");
-alert(".");
-player_guess = prompt(
-  "Scissors, Paper, or Rock (make sure the first letter is caps)"
-);
-computer_guess = randomintFrominterval(1, 3);
-if (player_guess == computer_guess) {
-  document.getElementById("user_feedback").innerHTML = "<em>Correct</em>";
-} else {
-  document.getElementById("userfeedback").innerHTML =
-    "u got it wrong u suck" + "the computer guessed" + computer_guess;
-}
-function randomintFrominterval(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+function playGame() {
+  const choices = ["rock", "paper", "scissors"];
+  const userChoice = prompt(
+    "Enter your choice (rock, paper, scissors):"
+  ).toLowerCase();
+  if (!choices.includes(userChoice)) {
+    alert("Invalid choice! Please enter rock, paper, or scissors.");
+    return;
+  }
+
+  const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+  let result = "";
+
+  if (userChoice == computerChoice) {
+    result = "It's a tie!";
+  } else if (
+    (userChoice == "rock" && computerChoice == "scissors") ||
+    (userChoice == "paper" && computerChoice == "rock") ||
+    (userChoice == "scissors" && computerChoice == "paper")
+  ) {
+    result = "You win!";
+  } else {
+    result = "You lose!";
+  }
+
+  alert(`You chose ${userChoice}, computer chose ${computerChoice}. ${result}`);
 }
