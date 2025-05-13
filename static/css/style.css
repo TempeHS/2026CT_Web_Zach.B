@@ -6,3 +6,9 @@
   height: 500px;
   width: 80%;
 }
+.carousel-inner {
+  background-color: rgb(7, 37, 65);
+}
+.navbar {
+  background-color: rgb(7, 37, 65);
+}
