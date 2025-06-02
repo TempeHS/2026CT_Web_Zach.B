@@ -7,11 +7,32 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     card_data = (
-        ("Factory", "The factory gamemode", "Check it out", "static/images/card_images/card_factory.png"),
-        ("Tower of doom", "The Tower of Doom gamemode", "Check it out", "static/images/card_images/card_towerofdoom.png"),
-        ("Fishing", "The fishing gamemode", "Check it out", "static/images/card_images/card_fishing.png"),
+        ("Factory", "A hybrid gamemode", "Check out the hybrid gamemodes", "static/images/card_images/card_factory.png", "/hybrid.html"),
+        ("Tower of doom", "A skill based gamemode", "Check out the skill based gamemodes", "static/images/card_images/card_towerofdoom.png", "/skill.html"),
+        ("Fishing", "A luck based gamemode", "Check out the luck based gamemodes", "static/images/card_images/card_fishing.png", "/luck.html"),
     )
     return render_template("index.html", cards=card_data), 200
+
+
+@app.route('/contact.html')
+def contact():
+    return render_template("contact.html"), 200
+
+@app.route('/hidden.html')
+def hidden():
+    return render_template("hidden.html"), 200
+
+@app.route('/luck.html')
+def luck():
+    return render_template("/gamemode_classes/luck.html"), 200
+
+@app.route('/skill.html')
+def skill():
+    return render_template("/gamemode_classes/skill.html"), 200
+
+@app.route('/hybrid.html')
+def hybrid():
+    return render_template("/gamemode_classes/hybrid.html"), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

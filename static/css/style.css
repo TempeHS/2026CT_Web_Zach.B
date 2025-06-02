@@ -4,7 +4,7 @@
 
 .slider_img {
   height: 700px;
-  width: 80%;
+  width: auto;
 }
 .carousel-inner {
   background-color: rgb(0, 255, 255);
