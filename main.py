@@ -28,7 +28,10 @@ def luck():
 
 @app.route('/skill.html')
 def skill():
-    return render_template("/gamemode_classes/skill.html"), 200
+    card_data = (
+        ("Tower Defense One", "A", "B", "static/images/card_images/card_td1.png" ),
+    )
+    return render_template("/gamemode_classes/skill.html", cards=card_data), 200
 
 @app.route('/hybrid.html')
 def hybrid():
