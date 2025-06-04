@@ -1,15 +1,13 @@
 {% extends "layout.html" %} {%block content%}
 <h1 class="text-center">Skill based gamemodes</h1>
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
     {% for card in cards %}
     <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card">
+      <div class="card text-center">
         <img src="{{card[3]}}" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">{{card[0]}}</h5>
-          <p class="card-text">{{card[1]}}</p>
-          <a href="{{card[4]}}" class="btn btn-primary">{{card[2]}}</a>
         </div>
       </div>
     </div>

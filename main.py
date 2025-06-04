@@ -24,18 +24,20 @@ def hidden():
 
 @app.route('/luck.html')
 def luck():
-    return render_template("/gamemode_classes/luck.html"), 200
+    return render_template("gamemode_classes/luck.html"), 200
 
 @app.route('/skill.html')
 def skill():
     card_data = (
-        ("Tower Defense One", "A", "B", "static/images/card_images/card_td1.png" ),
+        ("Tower Defense One", "The original", "", "static/images/card_images/card_td1.png"),
+        ("Tower Defense Two", "", "", "static/images/card_images/card_td2.png"),
+        ("Monster Brawl", "", "", "static/images/card_images/card_monsterbrawl.png"),
     )
-    return render_template("/gamemode_classes/skill.html", cards=card_data), 200
+    return render_template("gamemode_classes/skill.html", cards=card_data), 200
 
 @app.route('/hybrid.html')
 def hybrid():
-    return render_template("/gamemode_classes/hybrid.html"), 200
+    return render_template("gamemode_classes/hybrid.html"), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
