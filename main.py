@@ -24,7 +24,12 @@ def hidden():
 
 @app.route('/luck.html')
 def luck():
-    return render_template("gamemode_classes/luck.html"), 200
+    card_data = (
+        ("fishing", "", "", "static/images/card_images/card_fishing.png"),
+        ("Crypto Hack", "", "", "static/images/card_images/card_cryptohack.png"),
+        ("Deceptive Dinos", "", "", "static/images/card_images/card_deceptivedinos.png"),
+    )
+    return render_template("gamemode_classes/luck.html", cards=card_data), 200
 
 @app.route('/skill.html')
 def skill():
@@ -37,7 +42,20 @@ def skill():
 
 @app.route('/hybrid.html')
 def hybrid():
-    return render_template("gamemode_classes/hybrid.html"), 200
+    card_data = (
+        ("Tower Of Doom", "", "", "static/images/card_images/card_towerofdoom.png"),
+        ("Factory", "", "", "static/images/card_images/card_factory.png"),
+    )
+    return render_template("gamemode_classes/hybrid.html", cards=card_data), 200
+
+@app.route('/plus.html')
+def plus():
+    card_data = (
+        ("Laser Tag", "", "", "static/images/card_images/card_lasertag.png"),
+        ("Coco Cabana", "", "", "static/images/card_images/card_cococabana.png"),
+        ("Pirate's Voyage", "", "", "static/images/card_images/card_piratesvoyage.png"),
+    )
+    return render_template("gamemode_classes/plus.html", cards=card_data), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
