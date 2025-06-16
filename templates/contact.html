@@ -3,9 +3,13 @@
   <div class="row">
     <div class="col-lg-6 col-md-4 col-sm-12">
       <ol>
-        <li>Phone: 0987 6543 210</li>
+        <li>Phone: 0987 654 321</li>
         <li>Address</li>
       </ol>
+      <form>
+        <label for="name">Enter Your Name Here</label>
+        <input type="text" class="form-control" />
+      </form>
     </div>
     <div class="col-lg-6 col-md-8 col-sm-12">
       <iframe
@@ -18,6 +22,7 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
+    <p class="lipsum-bodytext text-center">{% include "lipsum.txt" %}</p>
   </div>
 </div>
 {% endblock %}

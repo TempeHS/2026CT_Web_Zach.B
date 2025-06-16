@@ -10,6 +10,7 @@ def index():
         ("Factory", "A hybrid gamemode", "Check out the hybrid gamemodes", "static/images/card_images/card_factory.png", "/hybrid.html"),
         ("Tower of doom", "A skill based gamemode", "Check out the skill based gamemodes", "static/images/card_images/card_towerofdoom.png", "/skill.html"),
         ("Fishing", "A luck based gamemode", "Check out the luck based gamemodes", "static/images/card_images/card_fishing.png", "/luck.html"),
+        ("Laser Tag", "A plus gamemode", "Check out the plus gamemodes", "static/images/card_images/card_lasertag.png", "/plus.html"),
     )
     return render_template("index.html", cards=card_data), 200
 
@@ -25,7 +26,7 @@ def hidden():
 @app.route('/luck.html')
 def luck():
     card_data = (
-        ("fishing", "", "", "static/images/card_images/card_fishing.png"),
+        ("Fishing Frenzy", "", "", "static/images/card_images/card_fishing.png"),
         ("Crypto Hack", "", "", "static/images/card_images/card_cryptohack.png"),
         ("Deceptive Dinos", "", "", "static/images/card_images/card_deceptivedinos.png"),
     )

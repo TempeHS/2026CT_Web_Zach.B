@@ -1,17 +1,27 @@
 {% extends "layout.html" %} {%block content%}
-<h1 class="text-center">Skill based gamemodes</h1>
-<div class="container">
-  <div class="row justify-content-center">
-    {% for card in cards %}
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card text-center">
-        <img src="{{card[3]}}" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{card[0]}}</h5>
+<div class="skill-bg">
+  <h1 class="text-center">Skill based gamemodes</h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      {% for card in cards %}
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-center">
+          <img src="{{card[3]}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{card[0]}}</h5>
+          </div>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+  </div>
+  <div class="container">
+    <div class="row">
+      <h3 class="text-center mt-4">
+        Skill based gamemodes are mainly beaten by the user's skill
+      </h3>
+      <p class="lipsum-bodytext text-center">{% include "lipsum.txt" %}</p>
+    </div>
   </div>
 </div>
 {% endblock %}
