@@ -3,12 +3,26 @@
 }
 
 .slider_img {
-  height: 700px;
-  width: auto;
+  height: auto;
+  width: 80%;
 }
 .carousel-inner {
-  background-color: rgb(0, 255, 255);
+  background-color: rgb(65, 65, 65);
 }
 .lipsum-bodytext {
   font-size: large;
+}
+.light-text {
+  color: rgba(255, 255, 255, 0.63);
+}
+.index-bg {
+  background-color: #222;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+.dark-margin {
+  background-color: black;
+}
+.error-bg {
+  background-color: #222;
 }

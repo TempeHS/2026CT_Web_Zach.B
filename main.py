@@ -3,6 +3,10 @@ from flask import render_template
 
 app = Flask(__name__)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
+
 @app.route('/index.html')
 @app.route('/')
 def index():
