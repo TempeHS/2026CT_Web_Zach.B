@@ -23,6 +23,7 @@
 .dark-margin {
   background-color: black;
 }
-.error-bg {
+.dark-bg {
   background-color: #222;
+  padding-bottom: 8rem;
 }

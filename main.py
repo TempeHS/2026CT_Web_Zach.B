@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request
 
 app = Flask(__name__)
 
@@ -19,9 +19,12 @@ def index():
     return render_template("index.html", cards=card_data), 200
 
 
-@app.route('/contact.html')
+@app.route('/contact.html', methods=['GET', 'POST'])
 def contact():
-    return render_template("contact.html"), 200
+    name = ""
+    if request.method == 'POST':
+        name = request.form.get('name', '')
+    return render_template("contact.html", name=name), 200
 
 @app.route('/hidden.html')
 def hidden():
