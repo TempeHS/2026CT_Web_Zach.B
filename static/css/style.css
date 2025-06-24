@@ -18,7 +18,6 @@
 .index-bg {
   background-color: #222;
   padding-top: 1rem;
-  padding-bottom: 0rem;
 }
 .dark-margin {
   background-color: black;
@@ -26,4 +25,12 @@
 .dark-bg {
   background-color: #222;
   padding-bottom: 8rem;
+}
+
+.card {
+  background-color: #0a0101;
+  color: rgb(255, 255, 255);
+}
+.error-bg {
+  padding-bottom: 13rem;
 }
