@@ -1,7 +1,8 @@
 {% extends "layout.html" %} {%block content%}
-<div class="dark-bg">
+<div class="contact-pg dark-bg">
   <div class="container">
     <div class="row">
+      <h1 class="text-center light-text">Contact Us Here</h1>
       <div class="col-lg-6 col-md-4 col-sm-12 light-text">
         <ol>
           <li>Phone: 0987 654 321</li>
@@ -12,7 +13,11 @@
           <input type="text" id="name" name="name" class="form-control" />
         </form>
         {% if name %}
-        <h3 class="mt-2">Ok, now we have your personal information</h3>
+        <h3 class="mt-2 text-center">Thanks for your cooperation</h3>
+        <img
+          src="static/images/logo.png"
+          class="contact-logo mt-4 d-block mx-auto"
+        />
         {% endif %}
       </div>
       <div class="col-lg-6 col-md-8 col-sm-12">

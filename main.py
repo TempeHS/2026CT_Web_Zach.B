@@ -7,30 +7,30 @@ app = Flask(__name__)
 def page_not_found(e):
     return render_template("404.html"), 404
 
-@app.route('/index.html')
+@app.route('/home')
 @app.route('/')
 def index():
     card_data = (
-        ("Factory", "A hybrid gamemode", "Check out the hybrid gamemodes", "static/images/card_images/card_factory.png", "/hybrid.html"),
-        ("Tower of doom", "A skill based gamemode", "Check out the skill based gamemodes", "static/images/card_images/card_towerofdoom.png", "/skill.html"),
-        ("Fishing", "A luck based gamemode", "Check out the luck based gamemodes", "static/images/card_images/card_fishing.png", "/luck.html"),
-        ("Laser Tag", "A plus gamemode", "Check out the plus gamemodes", "static/images/card_images/card_lasertag.png", "/plus.html"),
+        ("Factory", "A hybrid gamemode", "Check out the hybrid gamemodes", "static/images/card_images/card_factory.png", "/hybrid"),
+        ("Tower of doom", "A skill based gamemode", "Check out the skill based gamemodes", "static/images/card_images/card_towerofdoom.png", "/skill"),
+        ("Fishing", "A luck based gamemode", "Check out the luck based gamemodes", "static/images/card_images/card_fishing.png", "/luck"),
+        ("Laser Tag", "A plus gamemode", "Check out the plus gamemodes", "static/images/card_images/card_lasertag.png", "/plus"),
     )
     return render_template("index.html", cards=card_data), 200
 
 
-@app.route('/contact.html', methods=['GET', 'POST'])
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
     name = ""
     if request.method == 'POST':
         name = request.form.get('name', '')
     return render_template("contact.html", name=name), 200
 
-@app.route('/hidden.html')
+@app.route('/hidden')
 def hidden():
     return render_template("hidden.html"), 200
 
-@app.route('/luck.html')
+@app.route('/luck')
 def luck():
     card_data = (
         ("Fishing Frenzy", "", "", "static/images/card_images/card_fishing.png"),
@@ -39,16 +39,16 @@ def luck():
     )
     return render_template("gamemode_classes/luck.html", cards=card_data), 200
 
-@app.route('/skill.html')
+@app.route('/skill')
 def skill():
     card_data = (
-        ("Tower Defense One", "The original", "", "static/images/card_images/card_td1.png"),
+        ("Tower Defense One", "", "", "static/images/card_images/card_td1.png"),
         ("Tower Defense Two", "", "", "static/images/card_images/card_td2.png"),
         ("Monster Brawl", "", "", "static/images/card_images/card_monsterbrawl.png"),
     )
     return render_template("gamemode_classes/skill.html", cards=card_data), 200
 
-@app.route('/hybrid.html')
+@app.route('/hybrid')
 def hybrid():
     card_data = (
         ("Tower Of Doom", "", "", "static/images/card_images/card_towerofdoom.png"),
@@ -56,7 +56,7 @@ def hybrid():
     )
     return render_template("gamemode_classes/hybrid.html", cards=card_data), 200
 
-@app.route('/plus.html')
+@app.route('/plus')
 def plus():
     card_data = (
         ("Laser Tag", "", "", "static/images/card_images/card_lasertag.png"),
