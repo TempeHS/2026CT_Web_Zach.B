@@ -40,3 +40,15 @@
   height: 50%;
   width: 70%;
 }
+.button {
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid #04aa6d; /* Green */
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #04aa6d; /* Green */
+  color: white;
+}
